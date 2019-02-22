@@ -1,0 +1,52 @@
+
+第一章Git简介
+1 自报家门
+$ git config --global user.name "Your Name“
+$ git config --global user.email email@example.com
+2 创建空目录
+$ mkdir learngit $ cd learngit $ pwd
+3 初始化
+git init
+4 把文件提交到仓库
+ $ git add readme.txt
+ $ git commit -m "wrote a readme file"
+第二章时光机穿梭
+1 查看仓库当前状态
+git status
+2 查看修改内容
+git diff
+3 查看提交记录
+git log
+4 一行形式查看提交记录
+git log --pretty=oneline
+5 记录你每一次命令
+git reflog
+6 回退到上一版本
+git reset --hard  head^
+7 回退到某个版本 git reset --hard 版本号
+8 撤销修改
+git checkout --readme.txt
+9 删除文件
+git rm test.txt
+git commit -m "remove test.txt"
+第三章  远程仓库
+1 创建SSH Key
+$ ssh-keygen -t rsa -C youremail@example.com
+2 将ssh key添加到github中
+3 github中创建一个仓库
+4 将本地仓库与远程仓库关联
+git remote add origin  ssh地址
+5 push本地库中所有内容到远程库上
+git push -u origin master
+6 克隆远程仓库
+$ git clone git@github.com:zgdlzf/learngit.git
+第四章  分支管理
+1 切换到其它分支
+git checkout -b feature
+2 切换回主分支
+git checkout master
+3 合并git merge --no-ff -m  "merge with no-ff" feature
+4 拉取操作
+git pull
+
+
